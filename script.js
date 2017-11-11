@@ -28,8 +28,20 @@ app.config(["$routeProvider", function($routeProvider) {
       templateUrl: "main.html",
       controller: "MainController"
     })
+    .when('/about', {
+      templateUrl: "about.html",
+      controller: "MainController"
+    })
+    .when('/services', {
+      templateUrl: "services.html",
+      controller: "ServicesController"
+    })
+    .when('/contact', {
+      templateUrl: "contact.html",
+      controller: "ContactController"
+    })
     .otherwise({
-      redirectTo:"/main"
+      redirectTo:'/main'
     })
 }])
 
@@ -40,12 +52,29 @@ app.config(["$routeProvider", function($routeProvider) {
   In the body of the function is where the logic ofo the controller goes.
   These are all the actions that occur when the controller is called.
           ****************** $SCOPE **********************     
-  To use the controller, it needs to have $scope passed into the function as a parameter. $scope also needs to be claimed as a dependency for the controller. 
+  To use the controller, it needs to have $scope passed into the function as a parameter (injected as a dependency). $scope also needs to be claimed as a dependency for the controller .  
   Different values can ba assigned to the $scope object in the controller.
   $scope can also be accessed in tot view by using {{ }} and putting what is being access in the curly braces. 
+        ******************* $HTTP REQUESTS *********************
+  $http requests go in the controller and use the $http service, which must be included in the controller as a dependency and injected into the function parameters. 
 */
 app.controller("MainController", ["$scope", function ($scope){
-    $scope.person = "John Doe";
-    console.log($scope);
   
+}])
+
+app.controller("ServicesController", ["$scope", "$http", function ($scope, $http){
+    /*.get defines the http service that is being used
+      The first thing in the parens is what the http service should get: the services.json file information.
+      .then is followed by a callback function, which only runs after the http.get function has been executed successfully.
+      The callback function takes a parameter of response.
+      */
+    $http.get('services.json')
+      .then(function (response){
+          console.log(response);
+        });
+        
+  }])
+
+app.controller("ContactController", ["$scope", function($scope){
+
 }]);
