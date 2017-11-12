@@ -58,8 +58,18 @@ app.config(["$routeProvider", function($routeProvider) {
         ******************* $HTTP REQUESTS *********************
   $http requests go in the controller and use the $http service, which must be included in the controller as a dependency and injected into the function parameters. 
 */
-app.controller("MainController", ["$scope", function ($scope){
-  
+app.controller("MainController", ["$scope","$http", function ($scope, $http){
+      $scope.services = [];
+    $http({
+      method: 'GET',
+      url: '/services.json'
+    }).then(function (response){
+        $scope.services = response.data;
+        console.log(response.data);
+    },function error (response) {
+        alert("Things didn't go well with this GET request. You'll have to try it again."); 
+        console.log(response);
+    }); 
 }])
 
 app.controller("ServicesController", ["$scope", "$http", function ($scope, $http){
@@ -68,13 +78,32 @@ app.controller("ServicesController", ["$scope", "$http", function ($scope, $http
       .then is followed by a callback function, which only runs after the http.get function has been executed successfully.
       The callback function takes a parameter of response.
       */
-    $http.get('services.json')
-      .then(function (response){
+      $scope.services = [];
+    $http({
+      method: 'GET',
+      url: '/services.json'
+    }).then(function (response){
+        console.log(response.data);
+    /*This $scope variable is used to display the data (services,    name, id in each object of the array) on the services.html     page. This variable makes the information available for the    services.html view. */
+        $scope.services = response.data
+      },function error (response) {
+        alert("Things didn't go well with this GET request. You'll have to try it again."); 
+        console.log(response);
+      });
+    }])
+
+    
+app.controller("ContactController", ["$scope","$http", function($scope, $http){  
+  
+  $scope.locations = [];
+    $http({
+      method: 'GET',
+      url: '/locations.json'
+    }).then(function (response){
+        $scope.locations = response.data;
+        console.log(response.data);
+    },function error (response) {
+          alert("Things didn't go well with this GET request. You'll have to try it again."); 
           console.log(response);
-        });
-        
-  }])
-
-app.controller("ContactController", ["$scope", function($scope){
-
-}]);
+      }); 
+   }]);

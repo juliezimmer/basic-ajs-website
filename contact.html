@@ -1,50 +1,14 @@
-<!--
-  <div class="container">
-    <div class="masthead">
-      <h3 class="text-muted">Computer Solutions</h3>
-       <nav>
-        <ul class="nav nav-justified">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  <div class="row">
-    <div class="col-lg-12">  -->
-      <h2>Contact</h2>
-      <p>Please email support@computersolutions.net</p>
-      <h3>Locations</h3> 
-      <ul class="location">
-        <li>Lynn Location</li>
-        <li>333 Walnut Street</li>
-        <li>Lynn, MA 01902</li>
-        <li>781-555-5555</li>
-      </ul>  
-
-      <ul class="location">
-        <li>Amesbury Location</li>
-        <li>22 School Street</li>
-        <li>Amesbury, MA 01913</li>
-        <li>978-555-5555</li>
-      </ul> 
-    
-      <ul class="location">
-        <li>Boston Location</li>
-        <li>36 Mass Avenue</li>
-        <li>Boston, MA 01919</li>
-        <li>617-555-5555</li>
-      </ul>  
-    </div>
+ <h2>Contact</h2>
+    <p>Please email support@computersolutions.net</p>
+    <h3>Locations</h3> 
+  <div ng-repeat="location in locations">
+    <ul class="location">
+      <li>{{location.name}}</li>
+      <li>{{location.street_address}}</li>
+       <li>{{location.city}}, {{location.state}} {{location.zip}}</li>
+      <li>{{location.phone}}</li>
+    </ul>  
   </div>
-
-<!-- Site footer -->
-<!-- <footer class="footer">
-        <p>&copy; 2017 Company, Inc.</p>
-      </footer> -->
-
-   
-
-
+      
+ 
     

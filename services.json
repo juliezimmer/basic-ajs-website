@@ -1,25 +1,30 @@
 
-//These represent services offered by Computer Solutions
 
-[
-  {
-    "id": 1,
-    "name": "Hardware Repair",
-    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime impedit ab, voluptates porro in dicta fugit necessitatibus iure molestiae commodi aperiam? Deleniti debitis eligendi perferendis quia accusantium, nemo culpa, dicta optio libero impedit nostrum tenetur.",
-    "image":"computer-icon.png"
-  },
+  [
+    {
+      "id": 1,
+      "name": "Hardware Repair",
+       "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime impedit ab, voluptates porro in dicta fugit necessitatibus iure molestiae commodi aperiam? Deleniti debitis eligendi perferendis quia accusantium, nemo culpa, dicta optio libero impedit nostrum tenetur.",
+      "image":"Computer-Icon.png"
+    },
   
-  { "id": 2,
-    "name": "Virus Removal",
-    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime impedit ab, voluptates porro in dicta fugit necessitatibus iure molestiae commodi aperiam? Deleniti debitis eligendi perferendis quia accusantium, nemo culpa, dicta optio libero impedit nostrum tenetur.",
-    "image": "computer-icon.png"
-  },
+    { 
+      "id": 2,
+      "name": "Virus Removal",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime impedit ab, voluptates porro in dicta fugit necessitatibus iure molestiae commodi aperiam? Deleniti debitis eligendi perferendis quia accusantium, nemo culpa, dicta optio libero impedit nostrum tenetur.",
+      "image": "Computer-Icon.png"
+    },
 
-  {
-    "id": 3,
-    "name": "System TuneUps and Upgrades",
-    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime impedit ab, voluptates porro in dicta fugit necessitatibus iure molestiae commodi aperiam? Deleniti debitis eligendi perferendis quia accusantium, nemo culpa, dicta optio libero impedit nostrum tenetur.",
-    "image": "computer-icon.png"
+    {
+      "id": 3,
+      "name": "System TuneUps and Upgrades",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime impedit ab, voluptates porro in dicta fugit necessitatibus iure molestiae commodi aperiam? Deleniti debitis eligendi perferendis quia accusantium, nemo culpa, dicta optio libero impedit nostrum tenetur.",
+      "image": "Computer-Icon.png"
+    }
+  ]
 
-  }
-]
+
+
+
+
+

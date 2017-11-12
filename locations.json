@@ -1,0 +1,34 @@
+[
+  {
+    "id":1,
+    "name":"Lynn Location",
+    "street_address":"333 Walnut Street","city":"Lynn",
+    "state":"MA",
+    "zip":"01902",
+    "phone":"781-555-5555"
+    
+  },
+    
+  {
+    "id":2,
+    "name":"Amesbury Location","street_address":"22 School Street","city":"Amesbury",
+    "state":"MA",
+    "zip":"01913",
+    "phone":"978-555-5555"
+  },
+  
+  {
+    "id":3,
+    "name":"Boston Location",
+    "street_address":"36 Mass Avenue","city":"Boston",
+    "state":"MA",
+    "zip":"01919",
+    "phone":"617-555-5555"
+  }
+]
+
+
+
+
+
+
